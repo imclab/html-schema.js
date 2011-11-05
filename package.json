@@ -1,14 +1,14 @@
 {
-  "name": "shift",
-  "version": "0.1.4",
-  "description": "Template framework",
-  "homepage": "http://github.com/viatropos/shift.js",
-  "main": "lib/shift.js",
+  "name": "html-schema",
+  "version": "0.1.0",
+  "description": "Schema.org and Microformats",
+  "homepage": "http://github.com/viatropos/html-schema.js",
+  "main": "lib/html-schema.js",
   "author": "Lance Pollard <lancejpollard@gmail.com>",
   "keywords": [
-    "framework",
-    "compression",
-    "node"
+    "schema.org",
+    "microdata",
+    "microformats"
   ],
   "licenses": [
     {
@@ -17,17 +17,11 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/viatropos/shift.js/issues"
+    "url": "https://github.com/viatropos/html-schema.js/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/viatropos/shift.js.git"
+    "url": "https://github.com/viatropos/html-schema.js.git"
   },
-  "engines": { "node": ">= 0.4.0" },
-  "directories": {
-    "test": "spec"
-  },
-  "dependencies": {
-    
-  }
+  "engines": { "node": ">= 0.4.0" }
 }
