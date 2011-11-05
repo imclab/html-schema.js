@@ -10,7 +10,7 @@ npm install html-schema
 
 ### For the Browser
 
-```
+``` html
 <script type="text/javascript" src="/path/to/html-schema.js"></script>
 ```
 
