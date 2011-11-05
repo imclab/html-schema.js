@@ -20,7 +20,7 @@ The main goal is to simplify adding semantic attributes to your markup.  So in H
 
 ``` html
 <cite class='author vcard' itemprop='author' itemtype='http://schema.org/Person'>
-  <a href='/' class='url' rel='author' itemprop='url'> <!-- display: block -->
+  <a href='/' class='url' rel='author' itemprop='url'>
     <figure>
       <img src='/' class='photo' itemprop='image'/>
       <figcaption class='fn'>Lance Pollard</figcaption>
@@ -52,7 +52,7 @@ That's a lot to remember.  If you're using a templating framework, say jQuery.tm
 </script>
 
 <cite>
-  <a href='/' ${attrs(schema.author.id)}> <!-- display: block -->
+  <a href='/' ${attrs(schema.author.id)}>
     <figure>
       <img src='/' ${attrs(schema.author.image)}/>
       <figcaption ${attrs(schema.author.name)}>Lance Pollard</figcaption>
