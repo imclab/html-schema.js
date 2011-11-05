@@ -51,15 +51,17 @@ That's a lot to remember.  If you're using a templating framework, say jQuery.tm
   }
 </script>
 
-<cite>
-  <a href='/' ${attrs(schema.author.id)}>
-    <figure>
-      <img src='/' ${attrs(schema.author.image)}/>
-      <figcaption ${attrs(schema.author.name)}>Lance Pollard</figcaption>
-    </figure>
-  </a>
-  <!-- ... -->
-</cite>
+<script id='author-template' type='text/html'>
+  <cite>
+    <a href='/' ${attrs(schema.author.id)}>
+      <figure>
+        <img src='/' ${attrs(schema.author.image)}/>
+        <figcaption ${attrs(schema.author.name)}>Lance Pollard</figcaption>
+      </figure>
+    </a>
+    <!-- ... -->
+  </cite>
+</script>
 ```
 
 You can compile out just the schema you are using for optimal performance:
