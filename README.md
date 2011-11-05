@@ -16,6 +16,52 @@ npm install html-schema
 
 ## Usage
 
+The main goal is to simplify adding semantic attributes to your markup.  So in HTML you might want this:
+
+``` html
+<cite class='author vcard' itemprop='author' itemtype='http://schema.org/Person'>
+  <a href='/' class='url' rel='author' itemprop='url'> <!-- display: block -->
+    <figure>
+      <img src='/' class='photo' itemprop='image'/>
+      <figcaption class='fn'>Lance Pollard</figcaption>
+    </figure>
+  </a>
+  <!-- ... -->
+</cite>
+```
+
+That's a lot to remember.  If you're using a templating framework, say jQuery.tmpl, you can do something like this:
+
+``` javascript
+
+```
+
+``` html
+<script>
+  var schema = {"author":{"id":{"class":"author vcard","itemprop":"author","itemtype":"http://schema.org/Person"}}} //... the rest of the json
+  
+  function attrs(attributes) {
+    var result = [];
+    var key;
+    
+    for (key in attributes)
+      result.push(key + "='" + attributes[key] + "'")
+      
+    return result.join(" ")
+  }
+</script>
+
+<cite>
+  <a href='/' ${attrs(schema.author.id)}> <!-- display: block -->
+    <figure>
+      <img src='/' ${attrs(schema.author.image)}/>
+      <figcaption ${attrs(schema.author.name)}>Lance Pollard</figcaption>
+    </figure>
+  </a>
+  <!-- ... -->
+</cite>
+```
+
 You can compile out just the schema you are using for optimal performance:
 
 ``` coffeescript
